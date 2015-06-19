@@ -73,7 +73,7 @@ int level_exp(int remort, int level);
 char *title_male(int chclass, int level);
 char *title_female(int chclass, int level);
 struct time_info_data *real_time_passed(time_t t2, time_t t1);
-bool affected_by_spell(struct char_data * ch, int type);
+boolean affected_by_spell(struct char_data * ch, int type);
 char *add_points(int value);
 int parse_class(char arg);
 extern struct help_index_element *help_table;
@@ -561,7 +561,7 @@ sprintf(buf, "&w+------+----------------+------------------------------+--------
 /*void list_objs_in_house(struct char_data *ch)
 {
    struct obj_data *i;
-   bool found;
+   boolean found;
    int how_many = 0;
 
    found = FALSE;
@@ -595,7 +595,7 @@ sprintf(buf, "&w+------+----------------+------------------------------+--------
  */
 void show_obj_to_char(struct obj_data * object, struct char_data * ch, int mode)
 {
-  bool found;
+  boolean found;
   int remort, level;
 
   if (!object || !ch) {
@@ -715,7 +715,7 @@ void list_obj_to_char(struct obj_data * list, struct char_data * ch, int mode,
                            int show)
 {
   struct obj_data *i;
-  bool found;
+  boolean found;
 
   found = FALSE;
   for (i = list; i; i = i->next_content) {
@@ -732,7 +732,7 @@ void list_obj_to_char(struct obj_data * list, struct char_data * ch, int mode,
 void list_obj_to_char(struct obj_data * list, struct char_data * ch, int mode, int show)
 {
   struct obj_data *i, *j;
-  bool found;
+  boolean found;
   int num;
 
   found = FALSE;
@@ -1918,8 +1918,8 @@ ACMD(do_who)
   char mode;
 
   int low = 0, high = LVL_IMPL, showclass = 0;//, boot_high = 0;
-  bool who_room = FALSE, who_zone = FALSE, who_quest = 0;
-  bool outlaws = FALSE, noimm = FALSE, nomort = FALSE;
+  boolean who_room = FALSE, who_zone = FALSE, who_quest = 0;
+  boolean outlaws = FALSE, noimm = FALSE, nomort = FALSE;
 
   int gods = 0, morts = 0;
   size_t i;
@@ -3410,7 +3410,7 @@ ACMD(do_slist)
  extern char *spells[];
  extern struct spell_info_type spell_info[];
  int i, j, class, x = 1;
- bool flag = FALSE;
+ boolean flag = FALSE;
 
  *buf = '\0';
 
@@ -3456,7 +3456,7 @@ ACMD(do_sklist)
  extern char *spells[];
  extern struct spell_info_type spell_info[];
  int i, j, class;
- bool flag = FALSE;
+ boolean flag = FALSE;
 
  *buf = '\0';
  *buf2 = '\0';

@@ -322,7 +322,7 @@ int mandar_warshout(struct char_data * ch)
 {
   struct char_data *tch, *k;
   struct follow_type *f, *f_next;
-  bool i = 0;
+  boolean i = 0;
 
   if (ch == NULL)
     return (0);
@@ -1541,7 +1541,7 @@ ACMD(do_sacrifice)
 ACMD(do_gas)
 {
   byte percent;
-  bool has_bomb = FALSE;
+  boolean has_bomb = FALSE;
   struct obj_data *bomb;
 
   if (!GET_SKILL(ch, SKILL_WHITE_GAS)) {

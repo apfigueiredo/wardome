@@ -1122,7 +1122,7 @@ int search_block(char *arg, const char **list, int exact)
 /*
  * This function does the same thing as search_block, but it
  * uses strcasecmp.    */
-int search_block_case(char *arg, char **list, bool exact)
+int search_block_case(char *arg, char **list, boolean exact)
 {
   int i, l;
 

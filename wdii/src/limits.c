@@ -446,7 +446,7 @@ void gain_exp_regardless(struct char_data * ch, int gain)
 
 void gain_condition(struct char_data * ch, int condition, int value)
 {
-  bool intoxicated;
+  boolean intoxicated;
 
   if (IS_NPC(ch) || GET_COND(ch, condition) == -1)      /* No change */
     return;

@@ -119,7 +119,7 @@ extern struct char_data *tch;
 struct timeval null_time;       /* zero-valued time structure */
 FILE *logfile = NULL;           /* Where to send the log messages. */
 extern int multi_player;	/* max players per host */
-static bool fCopyOver;          /* Are we booting in copyover mode? */
+static boolean fCopyOver;          /* Are we booting in copyover mode? */
 int  mother_desc;        /* Now a global */
 int     port;
 
@@ -362,7 +362,7 @@ void copyover_recover()
 	FILE *fp;
 	char host[1024];
 	int desc, player_i;
-   	bool fOld;
+   	boolean fOld;
     	char name[MAX_INPUT_LENGTH];
 	
 	log ("Copyover recovery initiated");
@@ -2722,7 +2722,7 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj,
   const struct char_data *dg_victim = NULL;
   const struct obj_data *dg_target = NULL;
   const char *dg_arg = NULL;
-  bool uppercasenext = FALSE;
+  boolean uppercasenext = FALSE;
   
   buf = lbuf;
 

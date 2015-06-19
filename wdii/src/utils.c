@@ -559,7 +559,7 @@ char *add_points(int z_number)
   int unidade, milhar, milhao, bilhao, trab;
   char sunidade[3], smilhar[3], smilhao[3];
   char z_temp[MAX_STRING_LENGTH];
-  bool neg = FALSE;
+  boolean neg = FALSE;
 
   *sunidade = '\0';
   *smilhar = '\0';
@@ -633,7 +633,7 @@ char *add_points(int z_number)
 char *add_points(int z_number)
 {
  	int x, i = 0;
-	bool negativo = 0;
+	boolean negativo = 0;
 	char buffer[200];
 
 	if(z_number < 0) {
@@ -1021,7 +1021,7 @@ struct time_info_data *age(struct char_data * ch)
 
 /* Check if making CH follow VICTIM will create an illegal */
 /* Follow "Loop/circle"                                    */
-bool circle_follow(struct char_data * ch, struct char_data * victim)
+boolean circle_follow(struct char_data * ch, struct char_data * victim)
 {
   struct char_data *k;
 

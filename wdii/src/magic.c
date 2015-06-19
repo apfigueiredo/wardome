@@ -670,7 +670,7 @@ void mag_affects(int level, struct char_data * ch, struct char_data *
 victim, int spellnum, int savetype)
 {
   struct affected_type af[MAX_SPELL_AFFECTS];
-  bool accum_affect = FALSE, accum_duration = FALSE, imp = FALSE;
+  boolean accum_affect = FALSE, accum_duration = FALSE, imp = FALSE;
   const char *to_vict = NULL, *to_room = NULL;
   int i, x, y;
 

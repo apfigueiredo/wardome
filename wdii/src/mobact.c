@@ -159,7 +159,7 @@ number(1,12) == 3))  continue ;
 void remember(struct char_data * ch, struct char_data * victim)
 {
   memory_rec *tmp;
-  bool present = FALSE;
+  boolean present = FALSE;
 
   if (!IS_NPC(ch) || IS_NPC(victim) || PRF_FLAGGED(victim, PRF_NOHASSLE))
     return;

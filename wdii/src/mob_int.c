@@ -66,7 +66,7 @@ const struct mob_fight ataque[] = {
 
 int ver_melhor(struct char_data *ch, int ataque)
 {
-  bool x = FALSE;
+  boolean x = FALSE;
   int class;
   int levelch;
   int minlevel;

@@ -177,7 +177,7 @@ int is_name(const char *str, const char *namelist)
 }
 
 void affect_modify(struct char_data * ch, byte loc, int mod, long bitv,
-                        long bitv2, long bitv3, bool add)
+                        long bitv2, long bitv3, boolean add)
 {
   int maxabil;
 
@@ -426,7 +426,7 @@ void affect_from_char(struct char_data * ch, int type)
  * Return if a char is affected by a spell (SPELL_XXX), NULL indicates
  * not affected
  */
-bool affected_by_spell(struct char_data * ch, int type)
+boolean affected_by_spell(struct char_data * ch, int type)
 {
   struct affected_type *hjp;
 
@@ -440,10 +440,10 @@ bool affected_by_spell(struct char_data * ch, int type)
 
 
 void affect_join(struct char_data * ch, struct affected_type * af,
-                      bool add_dur, bool avg_dur, bool add_mod, bool avg_mod)
+                      boolean add_dur, boolean avg_dur, boolean add_mod, boolean avg_mod)
 {
   struct affected_type *hjp;
-  bool found = FALSE;
+  boolean found = FALSE;
 
   for (hjp = ch->affected; !found && hjp; hjp = hjp->next) {
 

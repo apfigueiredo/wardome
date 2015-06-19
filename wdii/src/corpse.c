@@ -41,7 +41,7 @@ void obj_to_obj(struct obj_data * obj, struct obj_data * obj_to);
 /* Local Function Declerations */
 void save_corpses(void);
 void load_corpses(void);
-int corpse_save(struct obj_data * obj, FILE * fp, int location, bool recurse_this_tree); 
+int corpse_save(struct obj_data * obj, FILE * fp, int location, boolean recurse_this_tree); 
 int write_corpse_to_disk(FILE *fp, struct obj_data *obj, int locate);
 void clean_string(char *buffer);
 
@@ -62,7 +62,7 @@ void clean_string(char *buffer)
     }
 }
 
-int corpse_save(struct obj_data * obj, FILE * fp, int location, bool recurse_this_tree) 
+int corpse_save(struct obj_data * obj, FILE * fp, int location, boolean recurse_this_tree) 
 {
   /* This function basically is responsible for taking the    */
   /* supplied obj and figuring out if it has any contents. If */

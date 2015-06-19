@@ -42,7 +42,7 @@ typedef signed short int sh_int;
 
 typedef unsigned short int ush_int;
 
-typedef char bool;
+typedef char boolean;
 
 typedef char byte;
 
@@ -140,7 +140,7 @@ struct THREE_player_special_data_saved {
 
   byte spells_to_learn;		/* How many can you learn yet this level */
 
-  bool talks[THREE_MAX_TONGUE];	/* PC s Tongues 0 for NPC          */
+  boolean talks[THREE_MAX_TONGUE];	/* PC s Tongues 0 for NPC          */
 
   int wimp_level;		/* Below this # of hit points, flee!    */
 
@@ -448,7 +448,7 @@ struct TWO_char_file_u {
 
   char description[240];
 
-  bool talks[TWO_MAX_TOUNGE];
+  boolean talks[TWO_MAX_TOUNGE];
 
   struct TWO_char_ability_data abilities;
 

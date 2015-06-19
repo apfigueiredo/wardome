@@ -90,7 +90,7 @@ int MAX(int a, int b);
 int MIN(int a, int b);
 
 /* in magic.c */
-bool    circle_follow(struct char_data *ch, struct char_data * victim);
+boolean    circle_follow(struct char_data *ch, struct char_data * victim);
 
 /* in act.informative.c */
 void    look_at_room(struct char_data *ch, int mode);

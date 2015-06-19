@@ -23,7 +23,7 @@ void TeleportPulseStuff()
   ACMD(do_look);
   int real_room(int virtual);
 
-  bool teleportP = FALSE;
+  boolean teleportP = FALSE;
   struct char_data *next = NULL, *tmp = NULL, *bk = NULL;
   struct room_data *rm = NULL;
   int troom = 0, i = 0;

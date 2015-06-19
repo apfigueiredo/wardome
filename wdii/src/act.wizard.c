@@ -1498,7 +1498,7 @@ ACMD(do_restore)
   struct descriptor_data *pt;
   struct char_data *vict;
   int i;
-  bool found = FALSE;
+  boolean found = FALSE;
 
   one_argument(argument, buf);
   if (!*buf)
@@ -2137,8 +2137,8 @@ ACMD(do_find)
   char find[MAX_STRING_LENGTH];
   struct obj_file_elem object;
   int searching, achado;
-  bool named;
-  bool found = FALSE;
+  boolean named;
+  boolean found = FALSE;
   struct rent_info rent;
 
   extern struct player_index_element *player_table;
@@ -2541,7 +2541,7 @@ ACMD(do_show)
   struct descriptor_data *d;
   int count = 0;
   char field[MAX_INPUT_LENGTH], value[MAX_INPUT_LENGTH], birth[80];
-  //bool found = FALSE;
+  //boolean found = FALSE;
 
   struct show_struct {
     const char *cmd;

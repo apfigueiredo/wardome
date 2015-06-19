@@ -260,7 +260,7 @@ ACMD(do_backstab)
 ACMD(do_order)
 {
   char name[MAX_INPUT_LENGTH], message[MAX_INPUT_LENGTH];
-  bool found = FALSE;
+  boolean found = FALSE;
   int org_room;
   struct char_data *vict;
   struct follow_type *k;

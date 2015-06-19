@@ -42,7 +42,7 @@ typedef signed char sbyte;
 typedef unsigned char ubyte;
 typedef signed short int sh_int;
 typedef unsigned short int ush_int;
-typedef char bool;
+typedef char boolean;
 typedef char byte;
 
 typedef sh_int room_num;
@@ -79,7 +79,7 @@ struct extra_descr_data {
 struct reset_com {
   char command;			/* current command                      */
 
-  bool if_flag;			/* if TRUE: exe only if preceding exe'd */
+  boolean if_flag;			/* if TRUE: exe only if preceding exe'd */
   int arg1;			/* */
   int arg2;			/* Arguments to the command             */
   int arg3;			/* */

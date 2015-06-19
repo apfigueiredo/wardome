@@ -756,7 +756,7 @@ typedef signed long		sh_long;
 typedef unsigned long		ush_long;
 
 #if !defined(__cplusplus)       /* Anyone know a portable method? */
-typedef char                    bool;
+typedef char                    boolean;
 #endif
 
 #ifndef CIRCLE_WINDOWS
@@ -1098,7 +1098,7 @@ struct char_special_data {
 struct player_special_data_saved {
    byte skills[MAX_SKILLS+1];   /* array of skills plus skill 0         */
    byte PADDING0;               /* used to be spells_to_learn           */
-   bool talks[MAX_TONGUE];      /* PC s Tongues 0 for NPC               */
+   boolean talks[MAX_TONGUE];      /* PC s Tongues 0 for NPC               */
    int  wimp_level;             /* Below this # of hit points, flee!    */
    int icq;
      byte freeze_level;           /* Level of god who froze char, if any  */
@@ -1129,7 +1129,7 @@ skill 0         */
    unsigned short int religion;
    short int rp;
 
-   bool language;		// Idioma; TRUE = English; -ips
+   boolean language;		// Idioma; TRUE = English; -ips
 
 };
 

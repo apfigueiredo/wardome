@@ -382,7 +382,7 @@ SPECIAL(king_welmar)
 
   static const char *path;
   static int index;
-  static bool move = FALSE;
+  static boolean move = FALSE;
 
   if (!move) {
     if (time_info.hours == 8 && ch->in_room == R_ROOM(Z_KINGS_C, 51)) {

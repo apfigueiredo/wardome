@@ -2005,7 +2005,7 @@ const char *estyles[] = {
 ACMD(do_style)
 {
   int x = 0;
-  bool t = FALSE;
+  boolean t = FALSE;
 
   one_argument(argument, arg);
 
