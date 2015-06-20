@@ -1,7 +1,7 @@
 #ifndef _TELEPORT_H_
 #define _TELEPORT_H_
 
-#define PULSE_TELEPORT      (10 RL_SEC)
+#define PULSE_TELEPORT      (10 * RL_SEC)
 #define MIN_TELEPORT_FREQ   2		/* 20 seconds RealTime */
 #define MAX_TELEPORT_FREQ   30		/* 5 minutes RealTime */
 

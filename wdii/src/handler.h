@@ -96,7 +96,7 @@ struct char_data **tar_ch, struct obj_data **tar_obj);
 
 /* prototypes from crash save system */
 
-int     Crash_get_filename(char *orig_name, char *filename);
+//int     Crash_get_filename(char *orig_name, char *filename);
 int     Crash_delete_file(char *name);
 int     Crash_delete_crashfile(struct char_data *ch);
 int     Crash_clean_file(char *name);

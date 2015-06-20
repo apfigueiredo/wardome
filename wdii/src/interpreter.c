@@ -350,6 +350,9 @@ ACMD(do_sps);
 ACMD(do_ukill);
 ACMD(do_sexec);
 
+
+ACMD(do_lua);
+
 struct command_info *complete_cmd_info;
 
 /* This is the Master Command List(tm).
@@ -534,6 +537,7 @@ cpp_extern const struct command_info cmd_info[] = {
    { "llist"    , "ll" 		, POS_DEAD    , do_liblist  , LVL_BUILDER, SCMD_LLIST },
    { "lock"     , "lo"		, POS_SITTING , do_gen_door , 0, SCMD_LOCK },
    { "load"     , "lock"	, POS_DEAD    , do_load     , LVL_GOD, 0},
+   { "lua"     , "lua"	, POS_DEAD    , do_lua     , LVL_GOD, 0},
 
    { "map"		,"map"		, POS_DEAD    , do_gen_tog  , 0, SCMD_MAP },
    { "meta"     , "met" 	, POS_RESTING , do_not_here , 0, 0 },

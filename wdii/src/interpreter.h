@@ -21,7 +21,7 @@ ACMD(do_move);
 void    command_interpreter(struct char_data *ch, char *argument);
 int     search_block(char *arg, const char **list, int exact);
 int	search_block_case(char *arg, char **list, boolean exact);
-char    lower( char c );
+//char    lower( char c );
 char    *one_argument(char *argument, char *first_arg);
 char    *one_word(char *argument, char *first_arg);
 char    *any_one_arg(char *argument, char *first_arg);

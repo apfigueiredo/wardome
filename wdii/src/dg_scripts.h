@@ -75,7 +75,7 @@
  * These are slightly off of PULSE_MOBILE so
  * everything isnt happening at the same time 
  */
-#define PULSE_DG_SCRIPT         (13 RL_SEC)
+#define PULSE_DG_SCRIPT         (13 * RL_SEC)
 
 
 #define MAX_SCRIPT_DEPTH      50          /* maximum depth triggers can

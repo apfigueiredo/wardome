@@ -691,11 +691,11 @@ string */
 
 #define OPT_USEC        100000  /* 10 passes per second */
 #define PASSES_PER_SEC  (1000000 / OPT_USEC)
-#define RL_SEC          * PASSES_PER_SEC
+#define RL_SEC          PASSES_PER_SEC
 
-#define PULSE_ZONE      (10 RL_SEC)
-#define PULSE_MOBILE    (10 RL_SEC)
-#define PULSE_VIOLENCE  (2 RL_SEC)
+#define PULSE_ZONE      (10 * RL_SEC)
+#define PULSE_MOBILE    (10 * RL_SEC)
+#define PULSE_VIOLENCE  (2 * RL_SEC)
 
 /* Variables for the output buffering system */
 #define MAX_SOCK_BUF            (12 * 1024) /* Size of kernel's sock buf   

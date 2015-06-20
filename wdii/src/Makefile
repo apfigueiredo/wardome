@@ -16,15 +16,19 @@ MYFLAGS = -Wall -Wno-char-subscripts -w
 #flags for profiling (see hacker.doc for more information)
 PROFILE =
 
+SWIG = swig3.0
+
 ##############################################################################
 # Do Not Modify Anything Below This Line (unless you know what you're doing) #
 ##############################################################################
 
 BINDIR = ../bin
 
-CFLAGS = -g -O0 $(MYFLAGS) $(PROFILE)
+CFLAGS = -g -O0 $(MYFLAGS) $(PROFILE) -I./lua-5.3.1/src 
 
-LIBS = -lcrypt 
+LIBS = -lcrypt -llua -lm
+
+LDFLAGS = -L./lua-5.3.1/src
 
 OBJFILES = act.comm.o act.informative.o act.movement.o act.item.o \
 	act.offensive.o act.other.o act.social.o act.wizard.o ban.o boards.o \
@@ -36,7 +40,7 @@ OBJFILES = act.comm.o act.informative.o act.movement.o act.item.o \
 	aedit.o breath.o arena.o dg_comm.o dg_db_scripts.o dg_event.o \
 	dg_handler.o dg_mobcmd.o dg_objcmd.o dg_scripts.o dg_triggers.o \
 	dg_wldcmd.o dg_olc.o qedit.o quest.o teleport.o condition.o winddragon.o \
-	buffer.o masters.o diskio.o prgrun.o
+	buffer.o masters.o diskio.o prgrun.o wardome_wrap.o lua.o
 
 CXREF_FILES = act.comm.c act.informative.c act.item.c act.movement.c \
 	act.offensive.c act.other.c act.social.c act.wizard.c ban.c boards.c \
@@ -53,6 +57,7 @@ CXREF_FILES = act.comm.c act.informative.c act.item.c act.movement.c \
 default: all
 
 all: .accepted
+	$(MAKE) lua
 	$(MAKE) $(BINDIR)/circle
 	$(MAKE) utils
 
@@ -64,8 +69,12 @@ utils: .accepted
 circle:
 	$(MAKE) $(BINDIR)/circle
 
+lua:
+	(cd lua-5.3.1; $(MAKE) linux)
+	$(SWIG) -lua wardome.i
+
 $(BINDIR)/circle : $(OBJFILES)
-	$(CC) -o $(BINDIR)/circle $(PROFILE) $(OBJFILES) $(LIBS)
+	$(CC) $(LDFLAGS) -o $(BINDIR)/circle $(PROFILE) $(OBJFILES) $(LIBS)
 
 bufhash: bufhash.c
 	$(CC) $(CFLAGS) -o $(BINDIR)/bufhash bufhash.c
@@ -74,6 +83,19 @@ thread: thread.o buffer.o
 
 clean:
 	rm -f *.o
+	rm -f lua-5.3.1/src/*.o lua-5.3.1/src/*.a
+	rm -f util/*.o
+	rm -f wardome_wrap.c
+
+wardome_wrap.o: wardome_wrap.c
+	$(CC) -c $(CFLAGS) -o wardome_wrap.o wardome_wrap.c
+
+wardome_wrap.c: wardome.i
+	$(SWIG) -lua wardome.i
+
+lua.o: lua.c interpreter.h structs.h
+	$(CC) -c $(CFLAGS) lua.c
+
 ref:
 #
 # Create the cross reference files

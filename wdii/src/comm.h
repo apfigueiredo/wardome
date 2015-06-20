@@ -17,7 +17,7 @@ void    send_to_all(const char *messg);
 void    send_to_char(const char *messg, struct char_data *ch);
 void    send_to_room(const char *messg, int room);
 void    send_to_outdoor(const char *messg);
-void    perform_to_all(const char *messg, struct char_data *ch);
+//void    perform_to_all(const char *messg, struct char_data *ch);
 void    close_socket(struct descriptor_data *d);
 void    brag(struct char_data *ch, struct char_data *victim);//mob avacalhador
 

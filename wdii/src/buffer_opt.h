@@ -10,7 +10,7 @@
  * Check for released and timed out buffers every 5 seconds.  This can be
  * be arbitrarily changed, but be careful of the lease life warning in buffer.c
  */
-#define PULSE_BUFFER    (5 RL_SEC)
+#define PULSE_BUFFER    (5 * RL_SEC)
 
 /*
  * 1 = use buffer system for all memory allocations using CREATE().

@@ -68,8 +68,8 @@ ush_int buffer_opt = BUF_OVERBOOT;
 #if !defined(MAGIC_NUMBER)
 #define MAGIC_NUMBER	(0x6)	/* Also in bpl13. */
 #endif
-#define BUFFER_LIFE	(180 RL_SEC)	/* 5 minutes */
-#define LEASE_LIFE	(60 RL_SEC)	/* 1 minute */
+#define BUFFER_LIFE	(180 * RL_SEC)	/* 5 minutes */
+#define LEASE_LIFE	(60 * RL_SEC)	/* 1 minute */
 
 /*
  * MEMORY ARRAY OPTIONS

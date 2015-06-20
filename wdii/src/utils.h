@@ -716,7 +716,7 @@ void    update_pos(struct char_data *victim);
 #define ARENA_RUNNING	2
 #define HALL_FAME_FILE "text/hallfame" /* the arena hall of fame */
 
-#define PULSE_ARENA	(75 RL_SEC)
+#define PULSE_ARENA	(75 * RL_SEC)
 
 #define MIN_ARENA_COST	1000	/* minimum cost per level */
 
